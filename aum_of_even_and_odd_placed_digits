@@ -1,0 +1,31 @@
+//Take N as input. Print the sum of its odd placed digits and sum of its even placed digits.
+//5 is present at 1st position, 3 is present at 2nd position, 6 is present at 3rd position and 2 is present at 4th position.
+//Sum of odd placed digits on first line. 5 and 6 are placed at odd position. Hence odd place sum is 5+6=11
+//Sum of even placed digits on second line. 3 and 2 are placed at even position. Hence even place sum is 3+2=5 for input 2635
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+    Scanner kz= new Scanner (System.in);
+    int n= kz.nextInt();
+    int No=n;
+    int counter= 0;
+    int sum1=0;
+    int sum2=0;
+    while(n!=0){
+        int q=No%10;
+        counter++;
+        n=n/10;
+    }
+    int q=1;
+    while(q<=counter){
+        if (q%2==0)
+        sum1=sum1+(No%10);
+        else
+        sum2=sum2+(No%10);
+        q++;
+        No=No/10;
+    }
+    System.out.println(sum2);
+    System.out.println(sum1);
+    }
+    }
